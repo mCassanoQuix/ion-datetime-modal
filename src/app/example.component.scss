@@ -1,0 +1,24 @@
+ion-modal {
+  --width: 100% !important;
+  --height: 100% !important;
+  --border-radius: 0 !important;
+}
+
+@media only screen and (min-width: 768px) and (min-height: 600px) {
+  .sc-ion-modal-ios-h,
+  .sc-ion-modal-md-h {
+    --ion-safe-area-top: env(--safe-area-top);
+  }
+}
+
+ion-modal {
+  &.bottom-sheet {
+    align-items: flex-end;
+    --height: auto !important;
+    .ion-page {
+      position: relative;
+      display: block;
+      contain: content;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inline Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button id="open-modal" expand="block">Open</ion-button>
+  <ion-modal
+    trigger="open-modal"
+    [handle]="false"
+    [keepContentsMounted]="false"
+    cssClass="bottom-sheet"
+    mode="ios"
+  >
+    <ng-template>
+      <ion-item
+        class="ion-no-padding"
+        style="--inner-padding-end: 0; text-transform: capitalize"
+      >
+        <ion-datetime
+          [showDefaultButtons]="true"
+          size="cover"
+          presentation="month"
+          [preferWheel]="true"
+        ></ion-datetime>
+      </ion-item>
+    </ng-template>
+  </ion-modal>
+</ion-content>
